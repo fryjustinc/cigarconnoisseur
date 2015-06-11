@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/recycleView"
+        android:layout_gravity="top"
+        android:layout_marginBottom="50dp"
+        android:elevation="2dp">
+    </ScrollView>
+    <ViewAnimator
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/cigaradd"
+        android:layout_gravity="bottom"
+        android:elevation="15dp"
+        android:layout_marginBottom="-345dp"
+        android:visibility="visible"
+        android:background="@drawable/menu_background">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addtext"
+            android:text="Add a cigar to your humidor"
+            android:textSize="20dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="top"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/brand"
+                android:text="Brand:"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                />
+            <AutoCompleteTextView
+                android:id="@+id/brandinput"
+                android:layout_width="273dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/brand"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/toggle"
+                android:text="toggle"/>
+        </RelativeLayout>
+    </ViewAnimator>
+    <FrameLayout
+        android:id="@+id/action_button_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-10dp"
+        android:elevation="16dp"
+        />
+
+</FrameLayout>
