@@ -2,17 +2,16 @@ package com.example.fryjc.cigarconnoisseur.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fryjc.cigarconnoisseur.R;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by fryjc on 6/7/2015.
  */
 public class CigarViewHolder extends RecyclerView.ViewHolder {
-    public final com.android.volley.toolbox.NetworkImageView holderImage;
+    public final ImageView holderImage;
     public final TextView brand;
     public final TextView mname;
     public final TextView vitola;
@@ -22,7 +21,7 @@ public class CigarViewHolder extends RecyclerView.ViewHolder {
 
     public CigarViewHolder(View itemView) {
         super(itemView);
-        holderImage =(com.android.volley.toolbox.NetworkImageView) itemView.findViewById(R.id.image);
+        holderImage =(ImageView) itemView.findViewById(R.id.holderImage);
         brand = (TextView) itemView.findViewById(R.id.brand);
         mname = (TextView) itemView.findViewById(R.id.name);
         vitola = (TextView) itemView.findViewById(R.id.vitola);

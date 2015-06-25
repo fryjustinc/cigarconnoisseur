@@ -1,15 +1,14 @@
 package com.example.fryjc.cigarconnoisseur.models;
 
+import android.support.annotation.DrawableRes;
+
 import com.example.fryjc.cigarconnoisseur.models.Cigar;
 import com.google.gson.annotations.SerializedName;
-
-import java.sql.Time;
-import java.util.Date;
 
 /**
  * Created by fryjc on 6/7/2015.
  */
-public class cigarHolder {
+public class CigarHolder {
 
 
     public String getAge() {
@@ -35,7 +34,17 @@ public class cigarHolder {
     private String amountSmoked;
     @SerializedName("mSmallImageURL")
     private String mSmallImageURL;
-    public cigarHolder(String age, String amountOwned, String amountSmoked, String personalRating, String ratingDescription, String dealer, String notes, String purchased, Cigar cigar) {
+
+    public int getmImage() {
+        return mImage;
+    }
+
+    public void setmImage(int mImage) {
+        this.mImage = mImage;
+    }
+
+    private int mImage;
+    public CigarHolder(String age, String amountOwned, String amountSmoked, String personalRating, String ratingDescription, String dealer, String notes, String purchased, Cigar cigar,int image) {
         this.age = age;
         this.amountOwned = amountOwned;
         this.amountSmoked = amountSmoked;
@@ -45,6 +54,7 @@ public class cigarHolder {
         this.notes = notes;
         this.purchased = purchased;
         this.cigar = cigar;
+        this.mImage=image;
     }
 
     public String getmSmallImageURL() {

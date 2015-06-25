@@ -4,39 +4,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <!-- The main content view -->
     <FrameLayout
+        android:id="@+id/flContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent" />
 
 
-        <!-- The main content view -->
-        <FrameLayout
-            android:id="@+id/flContent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
-            android:id="@+id/popup"
-            android:visibility="gone"></FrameLayout>
-    </FrameLayout>
 
     <!-- The navigation drawer -->
-    <ListView
-        android:id="@+id/lvDrawer"
-        android:layout_width="240dp"
+    <RelativeLayout
+        android:id="@+id/drawer_wrap"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:paddingTop="24dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="0dp"
-        android:background="@android:color/background_light" />
+        android:layout_gravity="start" >
+        <ImageView
+            android:id="@+id/drawer_pic"
+            android:src="@drawable/drawercigars"
+            android:layout_width="240dp"
+            android:layout_height="135dp"
+            android:layout_alignParentTop="true"
+            android:elevation="3dp"/>
+
+        <ListView
+            android:layout_below="@id/drawer_pic"
+            android:id="@+id/lvDrawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:divider="#E0E0E0"
+            android:dividerHeight="1dp"
+            android:background="@android:color/background_light" />
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="240dp"
+            android:background="@drawable/list_item_bg_normal"
+            android:layout_gravity="start"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/logout_layout">
+
+            <ImageView
+                android:id="@+id/log_pic"
+                android:src="@drawable/com_facebook_close"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/log_text"
+                android:text="Logout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/log_pic"
+                android:minHeight="?android:attr/listPreferredItemHeightSmall"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:gravity="center_vertical"
+                android:paddingRight="40dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
 </com.example.fryjc.cigarconnoisseur.FragmentNavigationDrawer>

@@ -7,8 +7,6 @@ import com.example.fryjc.cigarconnoisseur.enums.Wrapper;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
-
 
 
 public class Cigar {
@@ -28,16 +26,16 @@ public class Cigar {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public float getLength() {
+	public String getLength() {
 		return length;
 	}
-	public void setLength(float length) {
+	public void setLength(String length) {
 		this.length = length;
 	}
-	public int getRingGauge() {
+	public String getRingGauge() {
 		return ringGauge;
 	}
-	public void setRingGauge(int ringGauge) {
+	public void setRingGauge(String ringGauge) {
 		this.ringGauge = ringGauge;
 	}
 	public ArrayList<Country> getCountry() {
@@ -71,31 +69,37 @@ public class Cigar {
 	public void setStrength(Strength strength) {
 		this.strength = strength;
 	}
-	public float getRating() {
+	public String getRating() {
 		return rating;
 	}
-	public void setRating(float rating) {
+	public void setRating(String rating) {
 		this.rating = rating;
 	}
 	@SerializedName("length")
 	public String length;
 	@SerializedName("ringGauge")
-	public String ringGauge;
-	public ArrayList<Country> country;
-	public ArrayList<Filler> filler;
-	public ArrayList<Wrapper> wrapper;
-	public String color;
-	public Strength strength;
-	public float rating;
-	public Cigar(String pbrand, String pname, float plength, int pringGauge, ArrayList<Country> pcountry,
-			ArrayList<Filler> pfiller, ArrayList<Wrapper> pwrapper, String pcolor, Strength pstrength, float prating){
+	private String ringGauge;
+	@SerializedName("country")
+	private ArrayList<Country> country;
+	@SerializedName("filler")
+	private ArrayList<Filler> filler;
+	@SerializedName("wrapper")
+	private ArrayList<Wrapper> wrapper;
+	@SerializedName("color")
+	private String color;
+	@SerializedName("strength")
+	private Strength strength;
+	@SerializedName("rating")
+	private String rating;
+	public Cigar(String pbrand, String pname, String plength, String pringGauge, ArrayList<Country> pcountry,
+			ArrayList<Filler> pfiller, ArrayList<Wrapper> pwrapper, String pcolor, Strength pstrength, String prating){
 		brand = pbrand;
 		name = pname;
 		length = plength;
 		ringGauge = pringGauge;
-		country.addAll(pcountry);
-		filler.addAll(pfiller); 
-		wrapper.addAll(pwrapper);
+		country = pcountry;
+		filler= pfiller;
+		wrapper=pwrapper;
 		color = pcolor;
 		strength = pstrength;
 		rating = prating;
@@ -103,8 +107,8 @@ public class Cigar {
 	public Cigar(){
 		brand = "";
 		name = "";
-		length = 0;
-		ringGauge = 0;
+		length = "0";
+		ringGauge = "0";
 		country = new ArrayList<Country>();
 		filler = new ArrayList<Filler>();
 		wrapper = new ArrayList<Wrapper>();

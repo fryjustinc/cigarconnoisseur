@@ -3,6 +3,7 @@ package com.example.fryjc.cigarconnoisseur;
 /**
  * Created by fryjc on 5/27/2015.
  */
+
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,24 +17,28 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.example.fryjc.cigarconnoisseur.adapters.NavDrawerListAdapter;
-import com.example.fryjc.cigarconnoisseur.models.ContactCard;
 import com.example.fryjc.cigarconnoisseur.models.NavDrawerItem;
-import com.example.fryjc.cigarconnoisseur.viewmodel.FragmentDrawerViewModel;
+import com.example.fryjc.cigarconnoisseur.viewmodel.CigarDBViewModel;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
 public class FragmentNavigationDrawer extends DrawerLayout{
     private ActionBarDrawerToggle drawerToggle;
+    private RelativeLayout drawerWrap;
     private ListView lvDrawer;
     private ActionBar actionbar;
     private NavDrawerListAdapter drawerAdapter;
-    public ArrayList<NavDrawerItem> navDrawerItems;
+    private ArrayList<NavDrawerItem> navDrawerItems;
     private ArrayList<FragmentNavItem> drawerNavItems;
     private int drawerContainerRes;
-    private FragmentDrawerViewModel mViewModel;
-    public static final String contactBundleKey = "123";
+    private CigarDBViewModel mViewModel;
+    public static final String cigarDBKey = "123";
+    public static final String humidorKey = "456";
+    private ListView mLogout;
 
     public FragmentNavigationDrawer(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -47,13 +52,13 @@ public class FragmentNavigationDrawer extends DrawerLayout{
         super(context);
     }
 
-    public void setupDrawerConfiguration(ListView drawerListView, ActionBar drawerActionBar,
-                                         int drawerItemRes, int drawerContainerResId) {
+    public void setupDrawerConfiguration(RelativeLayout drawerLayout, ListView drawerList, ActionBar drawerActionBar) {
         drawerNavItems = new ArrayList<FragmentNavigationDrawer.FragmentNavItem>();
         navDrawerItems = new ArrayList<NavDrawerItem>();
-        drawerContainerRes = drawerContainerResId;
-        mViewModel = new FragmentDrawerViewModel(getActivity());
-        lvDrawer = drawerListView;
+        drawerContainerRes = R.id.flContent;
+        mViewModel = new CigarDBViewModel(getContext());
+        lvDrawer = drawerList;
+        drawerWrap = drawerLayout;
         actionbar = drawerActionBar;
         lvDrawer.setOnItemClickListener(new FragmentDrawerItemListener());
         drawerToggle = new ActionBarDrawerToggle(
@@ -68,8 +73,8 @@ public class FragmentNavigationDrawer extends DrawerLayout{
     }
 
 
-    public void addNavItem(String navTitle, String windowTitle, Class<? extends Fragment> fragmentClass) {
-        navDrawerItems.add(new NavDrawerItem(navTitle));
+    public void addNavItem(String navTitle,int navPic, String windowTitle, Class<? extends Fragment> fragmentClass) {
+        navDrawerItems.add(new NavDrawerItem(navTitle,navPic));
         drawerAdapter = new NavDrawerListAdapter(getActivity(),navDrawerItems);
         lvDrawer.setAdapter(drawerAdapter);
         drawerNavItems.add(new FragmentNavItem(windowTitle, fragmentClass));
@@ -80,20 +85,39 @@ public class FragmentNavigationDrawer extends DrawerLayout{
      */
     public void selectDrawerItem(final int position) {
         final FragmentNavItem navItem = drawerNavItems.get(position);
+        String tag = "";
+        switch(position){
+            case 0: tag = "HUMIDOR";
+                break;
+            case 1: tag = "DATABASE";
+                break;
+        }
         Fragment fragment = null;
         try {
             fragment = navItem.getFragmentClass().newInstance();
 
             final Fragment finalFragment = fragment;
+            final String finalTag = tag;
+            mViewModel.getCigarDB(new CigarDBViewModel.IReturnListener() {
+                                      @Override
+                                      public void onReturn(ArrayList<Object> brands) {
+                                          Bundle args = navItem.getFragmentArgs();
+                                          if (args != null) {
+                                              finalFragment.setArguments(args);
+                                          }
 
-                    Bundle args = navItem.getFragmentArgs();
-                    if (args != null) {
-                        finalFragment.setArguments(args);
-                    }
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    fragmentManager.beginTransaction().replace(drawerContainerRes, finalFragment,"HUMIDOR").addToBackStack("NAV").commit();
-
-
+                                          if (args == null) {
+                                              args = new Bundle();
+                                          }
+                                          Gson gson = new Gson();
+                                          String serialized = gson.toJson(brands);
+                                          args.putString(cigarDBKey, serialized);
+                                          finalFragment.setArguments(args);
+                                          FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                          fragmentManager.beginTransaction().replace(drawerContainerRes, finalFragment, finalTag).commit();
+                                      }
+                                  }
+            );
                     lvDrawer.setItemChecked(position, true);
                     setTitle(navItem.getTitle());
 
@@ -104,7 +128,7 @@ public class FragmentNavigationDrawer extends DrawerLayout{
         }
 
 
-        closeDrawer(lvDrawer);
+        closeDrawer(drawerWrap);
     }
 
 
@@ -132,6 +156,7 @@ public class FragmentNavigationDrawer extends DrawerLayout{
         }
     }
 
+
     private class FragmentNavItem {
         private Class<? extends Fragment> fragmentClass;
         private String title;
@@ -141,7 +166,7 @@ public class FragmentNavigationDrawer extends DrawerLayout{
             this(title, fragmentClass, null);
         }
 
-        public FragmentNavItem(String title, Class<? extends Fragment> fragmentClass, Bundle args) {
+        public FragmentNavItem(String title, Class<? extends Fragment> fragmentClass,  Bundle args) {
             this.fragmentClass = fragmentClass;
             this.fragmentArgs = args;
             this.title = title;
@@ -163,7 +188,7 @@ public class FragmentNavigationDrawer extends DrawerLayout{
 
 
     public boolean isDrawerOpen() {
-        return isDrawerOpen(lvDrawer);
+        return isDrawerOpen(drawerWrap);
     }
 
 }

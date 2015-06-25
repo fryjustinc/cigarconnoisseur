@@ -39,7 +39,7 @@ public class FloatingActionButton extends FrameLayout implements Checkable {
      * of a compound button changes.
      */
 
-    public static interface OnCheckedChangeListener {
+    public interface OnCheckedChangeListener {
 
         /**
          * Called when the checked state of a FAB has changed.
@@ -65,11 +65,11 @@ public class FloatingActionButton extends FrameLayout implements Checkable {
     private OnCheckedChangeListener mOnCheckedChangeListener;
 
     public FloatingActionButton(Context context) {
-        this(context, null, 0, 0);
+        this(context, null, 0);
     }
 
     public FloatingActionButton(Context context, AttributeSet attrs) {
-        this(context, attrs, 0, 0);
+        this(context, attrs, 0);
     }
 
     public FloatingActionButton(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -77,8 +77,7 @@ public class FloatingActionButton extends FrameLayout implements Checkable {
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public FloatingActionButton(Context context, AttributeSet attrs, int defStyleAttr,
-            int defStyleRes) {
+    private FloatingActionButton(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr);
 
         setClickable(true);

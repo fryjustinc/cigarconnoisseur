@@ -5,14 +5,21 @@
 
 
 
-    <ScrollView
+    <com.example.fryjc.cigarconnoisseur.SlidingTabLayout
+        android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/recycleView"
-        android:layout_gravity="top"
-        android:layout_marginBottom="50dp"
-        android:elevation="2dp">
-    </ScrollView>
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:background="@color/tab" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        ></android.support.v4.view.ViewPager>
+
     <ViewAnimator
         android:layout_width="match_parent"
         android:layout_height="400dp"
@@ -21,12 +28,13 @@
         android:elevation="15dp"
         android:layout_marginBottom="-345dp"
         android:visibility="visible"
-        android:background="@drawable/menu_background">
+        android:background="@color/icons"
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/addtext"
-            android:text="Add a cigar to your humidor"
+            android:text="Add a cigar"
             android:textSize="20dp"
             android:paddingLeft="30dp"
             android:paddingTop="15dp"
@@ -63,7 +71,7 @@
         android:layout_height="100dp"
         android:layout_gravity="bottom"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_marginBottom="-15dp"
         android:elevation="16dp"
         />
 

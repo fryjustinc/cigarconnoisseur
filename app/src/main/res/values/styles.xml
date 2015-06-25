@@ -12,6 +12,8 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
-    <color name="divider">#B6B6B6</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="tab">#565656</color>
+    <color name="cigar_add">#E3E3E3</color>
 
 </resources>

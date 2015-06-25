@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="132dp"
+    android:background="@color/icons">
+    <ImageView
+        android:id="@+id/cigarpic"
+        android:src="@drawable/cigar_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+    <TextView
+        android:id="@+id/numbertext"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Number of Cigars"
+        android:layout_toRightOf="@+id/labelpic"
+        android:layout_toEndOf="@+id/labelpic"
+        android:textColor="@color/divider"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/numberentry"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/numbertext"
+        android:layout_below="@id/numbertext" />
+    <ImageView
+        android:id="@+id/labelpic"
+        android:src="@drawable/cigar_label_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/typetext"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Types of Cigars"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/labelpic"
+        android:layout_toRightOf="@+id/labelpic"
+        android:textColor="@color/divider" />
+    <TextView
+        android:id="@+id/typeentry"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/typetext"
+        android:layout_below="@id/typetext"
+        android:layout_height="20dp" />
+    <ImageView
+        android:id="@+id/moneypic"
+        android:src="@drawable/money_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/numbertext"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/moneytext"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Value"
+        android:textColor="@color/divider"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/moneypic"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/moneyentry"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/moneytext"
+        android:layout_toRightOf="@id/moneypic"
+        android:layout_marginLeft="16dp"
+        android:layout_height="20dp" />
+    <ImageView
+        android:id="@+id/clockpic"
+        android:src="@drawable/clock"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignLeft="@+id/moneypic" />
+    <TextView
+        android:id="@+id/agetext"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Oldest"
+        android:textColor="@color/divider"
+        android:layout_alignTop="@+id/clockpic"
+        android:layout_toRightOf="@+id/clockpic"
+        android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/ageentry"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/agetext"
+        android:layout_toRightOf="@id/clockpic"
+        android:layout_marginLeft="16dp"
+        android:layout_height="20dp" />
+
+</RelativeLayout>

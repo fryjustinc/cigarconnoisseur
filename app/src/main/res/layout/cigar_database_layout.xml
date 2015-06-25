@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cigardatabaselayout">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_container"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="3dp"
+        android:background="@drawable/textbox">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:autoText="true"
+            android:editable="true"
+            android:elegantTextHeight="false"
+            android:singleLine="false"
+            android:height="40dp"
+            android:hint="Search Cigar Brands"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:editable="true"
+            android:autoText="true"
+            android:height="40dp"
+            android:hint="Search Cigar Names"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listView"
+        android:fastScrollEnabled="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:background="@color/icons"
+        android:divider="@color/secondary_text"
+        android:dividerHeight="4px">
+    </ListView>
+
+</LinearLayout>
