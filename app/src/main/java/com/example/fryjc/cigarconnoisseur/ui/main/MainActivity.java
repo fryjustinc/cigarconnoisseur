@@ -17,7 +17,7 @@ import com.example.fryjc.cigarconnoisseur.ui.logout.LogoutFragment;
 import com.example.fryjc.cigarconnoisseur.R;
 import com.example.fryjc.cigarconnoisseur.ui.brand.adapters.BrandListAdapter;
 import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.CigarListAdapter;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.FloatingActionButton;
+import com.example.fryjc.cigarconnoisseur.layoutlibrary.FloatingActionButton;
 import com.example.fryjc.cigarconnoisseur.models.CigarHolder;
 import com.firebase.client.Firebase;
 

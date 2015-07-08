@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.fryjc.cigarconnoisseur.ui.humidor;
+package com.example.fryjc.cigarconnoisseur.layoutlibrary;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

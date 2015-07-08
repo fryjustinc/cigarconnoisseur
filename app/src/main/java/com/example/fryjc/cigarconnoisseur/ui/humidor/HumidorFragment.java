@@ -28,6 +28,8 @@ import android.widget.ViewAnimator;
 import com.example.fryjc.cigarconnoisseur.R;
 import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.CustomSpinnerAdapter;
 import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.ViewPagerAdapter;
+import com.example.fryjc.cigarconnoisseur.layoutlibrary.FloatingActionButton;
+import com.example.fryjc.cigarconnoisseur.layoutlibrary.FloatingActionButtonBasicFragment;
 
 import java.util.ArrayList;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.fryjc.cigarconnoisseur.ui.layoutlibrary;
+package com.example.fryjc.cigarconnoisseur.layoutlibrary;
 
 import android.content.Context;
 import android.os.Parcel;
@@ -23,12 +23,12 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
+import android.webkit.WebView;
 
 /**
- * ScrollView that its scroll position can be observed.
+ * WebView that its scroll position can be observed.
  */
-public class ObservableScrollView extends ScrollView implements Scrollable {
+public class ObservableWebView extends WebView implements Scrollable {
 
     // Fields that should be saved onSaveInstanceState
     private int mPrevScrollY;
@@ -43,15 +43,15 @@ public class ObservableScrollView extends ScrollView implements Scrollable {
     private MotionEvent mPrevMoveEvent;
     private ViewGroup mTouchInterceptionViewGroup;
 
-    public ObservableScrollView(Context context) {
+    public ObservableWebView(Context context) {
         super(context);
     }
 
-    public ObservableScrollView(Context context, AttributeSet attrs) {
+    public ObservableWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ObservableScrollView(Context context, AttributeSet attrs, int defStyle) {
+    public ObservableWebView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -87,12 +87,8 @@ public class ObservableScrollView extends ScrollView implements Scrollable {
                 mScrollState = ScrollState.UP;
             } else if (t < mPrevScrollY) {
                 mScrollState = ScrollState.DOWN;
-                //} else {
-                // Keep previous state while dragging.
-                // Never makes it STOP even if scrollY not changed.
-                // Before Android 4.4, onTouchEvent calls onScrollChanged directly for ACTION_MOVE,
-                // which makes mScrollState always STOP when onUpOrCancelMotionEvent is called.
-                // STOP state is now meaningless for ScrollView.
+            } else {
+                mScrollState = ScrollState.STOP;
             }
             mPrevScrollY = t;
         }
@@ -121,6 +117,8 @@ public class ObservableScrollView extends ScrollView implements Scrollable {
     public boolean onTouchEvent(MotionEvent ev) {
         if (mCallbacks != null) {
             switch (ev.getActionMasked()) {
+                case MotionEvent.ACTION_DOWN:
+                    break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
                     mIntercepted = false;

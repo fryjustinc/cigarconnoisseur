@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.fryjc.cigarconnoisseur.ui.humidor;
+package com.example.fryjc.cigarconnoisseur.layoutlibrary;
 
 import android.annotation.TargetApi;
 import android.content.Context;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.fryjc.cigarconnoisseur.ui.layoutlibrary;
+package com.example.fryjc.cigarconnoisseur.layoutlibrary;
 
 import android.view.ViewGroup;
 
