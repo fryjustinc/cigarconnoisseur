@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.utils;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import com.android.volley.RequestQueue;
 import com.example.fryjc.cigarconnoisseur.R;
 import com.example.fryjc.cigarconnoisseur.models.CigarHolder;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.viewholders.CigarViewHolder;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.viewholders.StatsViewHolder;
 
 import java.util.ArrayList;
 

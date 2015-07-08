@@ -26,11 +26,8 @@ import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 import com.example.fryjc.cigarconnoisseur.R;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.layout.SlidingTabLayout;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.utils.CustomSpinnerAdapter;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.utils.ViewPagerAdapter;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.layout.FloatingActionButton;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.layout.FloatingActionButtonBasicFragment;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.CustomSpinnerAdapter;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.ViewPagerAdapter;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.utils;
+package com.example.fryjc.cigarconnoisseur.ui.humidor;
 
 /**
  * Created by fryjc on 6/7/2015.

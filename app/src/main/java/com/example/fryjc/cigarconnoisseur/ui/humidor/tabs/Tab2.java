@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.smoked;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.tabs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

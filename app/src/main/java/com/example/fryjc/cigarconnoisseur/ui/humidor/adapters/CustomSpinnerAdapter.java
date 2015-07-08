@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.utils;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.adapters;
 
 import java.util.ArrayList;
 import android.content.Context;

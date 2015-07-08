@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.utils;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

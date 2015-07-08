@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.fryjc.cigarconnoisseur.ui.humidor.layout;
+package com.example.fryjc.cigarconnoisseur.ui.humidor;
 
 import android.content.Context;
 import android.graphics.Typeface;

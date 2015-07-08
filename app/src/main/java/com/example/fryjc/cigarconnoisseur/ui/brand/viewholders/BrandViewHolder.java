@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.brand;
+package com.example.fryjc.cigarconnoisseur.ui.brand.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

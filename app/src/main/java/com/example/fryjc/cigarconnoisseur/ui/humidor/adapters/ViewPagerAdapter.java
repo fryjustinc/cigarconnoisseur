@@ -1,11 +1,11 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.utils;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.fryjc.cigarconnoisseur.ui.humidor.owned.Tab1;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.smoked.Tab2;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.tabs.Tab1;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.tabs.Tab2;
 
 /**
  * Created by hp1 on 21-01-2015.

@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.humidor.owned;
+package com.example.fryjc.cigarconnoisseur.ui.humidor.tabs;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 
 import com.example.fryjc.cigarconnoisseur.R;
-import com.example.fryjc.cigarconnoisseur.ui.humidor.utils.CigarListAdapter;
+import com.example.fryjc.cigarconnoisseur.ui.humidor.adapters.CigarListAdapter;
 import com.example.fryjc.cigarconnoisseur.enums.Country;
 import com.example.fryjc.cigarconnoisseur.enums.Filler;
 import com.example.fryjc.cigarconnoisseur.enums.Strength;
@@ -15,7 +15,6 @@ import com.example.fryjc.cigarconnoisseur.enums.Wrapper;
 import com.example.fryjc.cigarconnoisseur.ui.layoutlibrary.ObservableListView;
 import com.example.fryjc.cigarconnoisseur.ui.layoutlibrary.ObservableScrollViewCallbacks;
 import com.example.fryjc.cigarconnoisseur.ui.layoutlibrary.ScrollState;
-import com.example.fryjc.cigarconnoisseur.ui.layoutlibrary.ScrollUtils;
 import com.example.fryjc.cigarconnoisseur.models.Cigar;
 import com.example.fryjc.cigarconnoisseur.models.CigarHolder;
 import com.nineoldandroids.view.ViewHelper;

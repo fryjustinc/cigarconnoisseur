@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.fryjc.cigarconnoisseur.R;
-import com.example.fryjc.cigarconnoisseur.ui.brand.BrandListAdapter;
+import com.example.fryjc.cigarconnoisseur.ui.brand.adapters.BrandListAdapter;
 import com.example.fryjc.cigarconnoisseur.ui.main.FragmentNavigationDrawer;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

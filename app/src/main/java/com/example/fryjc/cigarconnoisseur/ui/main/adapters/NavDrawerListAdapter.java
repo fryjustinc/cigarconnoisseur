@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.main;
+package com.example.fryjc.cigarconnoisseur.ui.main.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

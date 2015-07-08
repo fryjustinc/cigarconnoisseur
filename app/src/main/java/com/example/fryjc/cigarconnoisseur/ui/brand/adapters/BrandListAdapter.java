@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui.brand;
+package com.example.fryjc.cigarconnoisseur.ui.brand.adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import com.android.volley.RequestQueue;
 import java.util.ArrayList;
 
 import com.example.fryjc.cigarconnoisseur.R;
+import com.example.fryjc.cigarconnoisseur.ui.brand.viewholders.BrandViewHolder;
 
 /**
  * Created by fryjc on 6/7/2015.
