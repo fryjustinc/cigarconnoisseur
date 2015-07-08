@@ -1,4 +1,4 @@
-<com.example.fryjc.cigarconnoisseur.FragmentNavigationDrawer
+<com.example.fryjc.cigarconnoisseur.ui.main.FragmentNavigationDrawer
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
@@ -69,4 +69,4 @@
         </RelativeLayout>
     </RelativeLayout>
 
-</com.example.fryjc.cigarconnoisseur.FragmentNavigationDrawer>
+</com.example.fryjc.cigarconnoisseur.ui.main.FragmentNavigationDrawer>

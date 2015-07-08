@@ -5,7 +5,7 @@
 
 
 
-    <com.example.fryjc.cigarconnoisseur.SlidingTabLayout
+    <com.example.fryjc.cigarconnoisseur.ui.humidor.layout.SlidingTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
