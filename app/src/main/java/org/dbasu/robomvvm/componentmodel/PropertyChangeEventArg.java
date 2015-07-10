@@ -32,7 +32,7 @@
 package org.dbasu.robomvvm.componentmodel;
 
 /**
- * Used to notify listeners when a property in a {@link Component} changes.
+ * Used to notify listeners when a property in a {@link org.dbasu.robomvvm.componentmodel.Component} changes.
  */
 public class PropertyChangeEventArg extends EventArg {
 

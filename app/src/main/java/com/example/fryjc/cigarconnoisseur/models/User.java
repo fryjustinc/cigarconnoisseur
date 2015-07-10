@@ -1,43 +1,32 @@
 package com.example.fryjc.cigarconnoisseur.models;
 
+import com.firebase.client.AuthData;
+
 import java.util.ArrayList;
 
 /**
  * Created by fryjc on 6/7/2015.
  */
 public class User {
-    private String mUsername;
-    private String mEmail;
+    private AuthData authData;
     private Humidor mHumidor;
     private ArrayList<PMessage> mMessages;
     private ArrayList<RatingComment> mComments;
     private ArrayList<CigarRating> mRatings;
 
-    public User(String mUsername, String mEmail, Humidor mHumidor, ArrayList<PMessage> mMessages, ArrayList<RatingComment> mComments, ArrayList<CigarRating> mRatings) {
+    public User() {
 
-        this.mUsername = mUsername;
-        this.mEmail = mEmail;
-        this.mHumidor = mHumidor;
-        this.mMessages = mMessages;
-        this.mComments = mComments;
-        this.mRatings = mRatings;
     }
 
-    public String getmUsername() {
-        return mUsername;
+    public AuthData getAuthData() {
+        return authData;
     }
 
-    public void setmUsername(String mUsername) {
-        this.mUsername = mUsername;
+    public void setAuthData(AuthData authData) {
+        this.authData = authData;
     }
 
-    public String getmEmail() {
-        return mEmail;
-    }
 
-    public void setmEmail(String mEmail) {
-        this.mEmail = mEmail;
-    }
 
     public Humidor getmHumidor() {
         return mHumidor;

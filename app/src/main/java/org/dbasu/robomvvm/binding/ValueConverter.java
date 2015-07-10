@@ -32,7 +32,7 @@
 package org.dbasu.robomvvm.binding;
 
 /**
- * Converts between source and target values in a {@link Binding}
+ * Converts between source and target values in a {@link org.dbasu.robomvvm.binding.Binding}
  */
 public interface ValueConverter {
 

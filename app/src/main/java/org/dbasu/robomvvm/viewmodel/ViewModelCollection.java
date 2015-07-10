@@ -46,8 +46,8 @@ import java.util.List;
 
 
 /**
- * A collection of {@link ViewModel}s. Provides an array adapter for use in adapter views.
- * Can notify listeners of changing item checked states using {@link ItemCheckedEventArg}.
+ * A collection of {@link org.dbasu.robomvvm.viewmodel.ViewModel}s. Provides an array adapter for use in adapter views.
+ * Can notify listeners of changing item checked states using {@link org.dbasu.robomvvm.viewmodel.ItemCheckedEventArg}.
  */
 public class ViewModelCollection<T extends ViewModel> extends Component {
 

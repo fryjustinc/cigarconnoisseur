@@ -33,7 +33,7 @@ package org.dbasu.robomvvm.componentadapter.listview;
 import org.dbasu.robomvvm.componentmodel.PropertyChangeEventArg;
 
 /**
- * Raised by a {@link ListViewAdapter} to notify listeners when
+ * Raised by a {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter} to notify listeners when
  * its scroll state has changed.
  */
 public class ScrollStateChangeEventArg extends PropertyChangeEventArg {
@@ -47,9 +47,9 @@ public class ScrollStateChangeEventArg extends PropertyChangeEventArg {
      * @param sender
      *              The ListViewAdapter that raises this event.
      * @param scrollState
-     *              The scroll state. One of {@link ListViewAdapter#SCROLL_STATE_IDLE},
-     *              {@link ListViewAdapter#SCROLL_STATE_TOUCH_SCROLL},
-     *              or {@link ListViewAdapter#SCROLL_STATE_FLING}.
+     *              The scroll state. One of {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_IDLE},
+     *              {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_TOUCH_SCROLL},
+     *              or {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_FLING}.
      */
     public ScrollStateChangeEventArg(ListViewAdapter sender, int scrollState) {
         super(sender, "scrollState");
@@ -59,9 +59,9 @@ public class ScrollStateChangeEventArg extends PropertyChangeEventArg {
     /**
      * Get the Scroll State.
      * @return
-     *              One of {@link ListViewAdapter#SCROLL_STATE_IDLE},
-     *              {@link ListViewAdapter#SCROLL_STATE_TOUCH_SCROLL},
-     *              or {@link ListViewAdapter#SCROLL_STATE_FLING}.
+     *              One of {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_IDLE},
+     *              {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_TOUCH_SCROLL},
+     *              or {@link org.dbasu.robomvvm.componentadapter.listview.ListViewAdapter#SCROLL_STATE_FLING}.
      */
     public int getScrollState() {
         return scrollState;

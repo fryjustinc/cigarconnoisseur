@@ -130,7 +130,7 @@ public abstract class BaseViewModel extends Component {
 
     /**
      * Bind a property of this view model to a property of an element in its layout. Performs no conversion.
-     * Uses {@link BindMode#SOURCE_TO_TARGET} which results in one-way
+     * Uses {@link org.dbasu.robomvvm.binding.BindMode#SOURCE_TO_TARGET} which results in one-way
      * binding from this view model to the target element.
      *
      * @param property

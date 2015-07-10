@@ -46,7 +46,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Package private class used for invoking actions by {@link Component}.
+ * Package private class used for invoking actions by {@link org.dbasu.robomvvm.componentmodel.Component}.
  */
 class ActionManager {
 
@@ -158,7 +158,7 @@ class ActionManager {
 
     private ActionDescriptor getActionDescriptor(Class objectType, String actionName) {
 
-        String hash = objectType.getName() + "." + actionName;
+        String hash = objectType.getName() + "" + actionName;
 
         ActionDescriptor ret = actionMap.get(hash);
 

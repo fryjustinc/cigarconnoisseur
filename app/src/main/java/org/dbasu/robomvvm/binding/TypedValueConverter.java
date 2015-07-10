@@ -60,7 +60,7 @@ public class TypedValueConverter implements ValueConverter {
 
     /**
      * Attempt to convert the value of the source property to the target type. If the type of the source property
-     * is assignable to the target type, it performs a cast. If it is not, and the target type is {@link String},
+     * is assignable to the target type, it performs a cast. If it is not, and the target type is {@link java.lang.String},
      * it calls the the source property's {@link Object#toString()} function.
      *
      * @param value
@@ -94,7 +94,7 @@ public class TypedValueConverter implements ValueConverter {
 
     /**
      * Attempt to convert the value of the target property to the source type. If the type of the target property
-     * is assignable to the source type, it performs a cast. If it is not, and the source type is {@link String},
+     * is assignable to the source type, it performs a cast. If it is not, and the source type is {@link java.lang.String},
      * it calls the the target property's {@link Object#toString()} function.
      *
      * @param value

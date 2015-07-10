@@ -34,7 +34,7 @@ package org.dbasu.robomvvm.componentmodel;
 import com.google.common.base.Preconditions;
 
 /**
- * An event listener that listens to events of a particular {@link EventArg} class.
+ * An event listener that listens to events of a particular {@link org.dbasu.robomvvm.componentmodel.EventArg} class.
  */
 public abstract class EventListener {
 

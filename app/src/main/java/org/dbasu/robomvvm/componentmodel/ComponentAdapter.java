@@ -67,7 +67,7 @@ import java.util.Map;
 
 /**
  * An adapter to make components from arbitrary objects. Make associations between object classes and component adapters
- * classes using {@link Associations}. Create or retrieve the component adapter
+ * classes using {@link ComponentAdapter.Associations}. Create or retrieve the component adapter
  * of an object of one of the associated types or their subtypes using {@link #get(Object)}.
  */
 public class ComponentAdapter extends Component {
@@ -156,7 +156,7 @@ public class ComponentAdapter extends Component {
 
     /**
      * Create or retrieve the component adapter for the supplied object. Once created, the component adapter is stored as a tag
-     * on the supplied object using {@link ObjectTagger}, which stores weak references to the supplied object to
+     * on the supplied object using {@link org.dbasu.robomvvm.util.ObjectTagger}, which stores weak references to the supplied object to
      * allow for Garbage Collection. Any component adapter associated with an object that has been garbage collected is not stored
      * internally by the library.
      *
@@ -165,7 +165,7 @@ public class ComponentAdapter extends Component {
      * @return
      *          The component adapter for the supplied object.
      *
-     * @throws RuntimeException
+     * @throws java.lang.RuntimeException
      *          When no component adapter class is associated with
      *          the class of the supplied object.
      */

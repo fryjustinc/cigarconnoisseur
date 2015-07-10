@@ -157,7 +157,7 @@ public class Component  {
      * and the type of the supplied value. For example, if the name of the property is "foo" and the supplied value is
      * of type int, this will attempt to call {@code setFoo(int)}.
      *
-     * @throws RuntimeException
+     * @throws java.lang.RuntimeException
      *          When a corresponding setter function is not found in this component.
      * @param name
      *          The name of the property.
@@ -175,7 +175,7 @@ public class Component  {
      * Gets the value of a property with a given name. A getter function is called corresponding to the supplied
      * property name. For example, if the supplied property name is "foo", this will attempt to call {@code getFoo()}.
      *
-     * @throws RuntimeException
+     * @throws java.lang.RuntimeException
      *          When a corresponding getter function is not found in this component.
      * @param name
      *          The name of the property.
@@ -193,7 +193,7 @@ public class Component  {
      * supplied name, have a void return type, and have either a single argument of a type compatible with the supplied event arg,
      * or no arguments.
      *
-     * @throws RuntimeException
+     * @throws java.lang.RuntimeException
      *          When a corresponding action function is not found in this component.
      * @param name
      *          The name of the action function.
@@ -211,7 +211,7 @@ public class Component  {
      * Invoke an action with a supplied name and no arguments. Calls a function in this component whose name matches the
      * supplied name, has a void return type, and has no arguments.
      *
-     * @throws RuntimeException
+     * @throws java.lang.RuntimeException
      *          When a corresponding action function is not found in this component.
      * @param name
      *          The name of the action function.

@@ -48,7 +48,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Package private class used for setting and getting properties by {@link Component}.
+ * Package private class used for setting and getting properties by {@link org.dbasu.robomvvm.componentmodel.Component}.
  */
 class PropertyManager {
 
@@ -84,7 +84,7 @@ class PropertyManager {
 
     private PropertyDescriptor getPropertyDescriptor(Class objectType, String name) {
 
-        String hash = objectType.getName() + "." + name;
+        String hash = objectType.getName() + "" + name;
 
         PropertyDescriptor ret = propertyMap.get(hash);
 
@@ -186,7 +186,7 @@ class PropertyManager {
 
         Class targetType = targetObject.getClass();
 
-        PropertyDescriptor desc = getPropertyDescriptor(targetType, name);
+        PropertyManager.PropertyDescriptor desc = getPropertyDescriptor(targetType, name);
         if(desc == null || desc.getter == null) {
             throw new RuntimeException("No Gettable Property By Name " + name + " Found In Class " + targetType.getName());
         }

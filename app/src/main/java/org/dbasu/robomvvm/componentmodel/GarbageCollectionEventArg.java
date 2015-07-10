@@ -32,7 +32,7 @@
 package org.dbasu.robomvvm.componentmodel;
 
 /**
- * Used to notify listeners when a {@link Component} is garbage collected.
+ * Used to notify listeners when a {@link org.dbasu.robomvvm.componentmodel.Component} is garbage collected.
  */
 public class GarbageCollectionEventArg extends EventArg {
 

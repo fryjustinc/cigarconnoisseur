@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.WeakHashMap;
 
 /**
- * Associates arbitrary tags with a supplied object. The tags are indexed using a {@link String} key. Stores weak references to the supplied
+ * Associates arbitrary tags with a supplied object. The tags are indexed using a {@link java.lang.String} key. Stores weak references to the supplied
  * objects to allow them to be garbage collected. Automatically removes associated tags when its object is garbage collected.
  */
 public class ObjectTagger {
@@ -68,7 +68,7 @@ public class ObjectTagger {
      * @param object
      *          The object to set the tag for.
      * @param key
-     *          The {@link String} index for the tag.
+     *          The {@link java.lang.String} index for the tag.
      * @param value
      *          The actual tag.
      */
@@ -89,7 +89,7 @@ public class ObjectTagger {
      * @param object
      *      The object to remove the tag from.
      * @param key
-     *      The {@link String} index of the tag to remove.
+     *      The {@link java.lang.String} index of the tag to remove.
      * @return
      *      The tag that has been removed. Null if no such tag exists.
      */
@@ -114,7 +114,7 @@ public class ObjectTagger {
      * @param object
      *      The object to get the tag of.
      * @param key
-     *      The {@link String} index of the tag to get.
+     *      The {@link java.lang.String} index of the tag to get.
      * @return
      *      The associated tag. Null if no such tag exists.
      */

@@ -13,10 +13,12 @@ import com.firebase.client.Firebase;
  * @since 12/17/14
  */
 public class Initialize extends Application {
+    public static UserViewModel mUserViewModel;
     @Override
     public void onCreate() {
         super.onCreate();
         Firebase.setAndroidContext(this);
         FacebookSdk.sdkInitialize(this);
+        mUserViewModel = new UserViewModel();
     }
 }

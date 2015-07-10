@@ -32,7 +32,7 @@
 package org.dbasu.robomvvm.binding;
 
 /**
- * Specifies the direction of a {@link Binding}.
+ * Specifies the direction of a {@link org.dbasu.robomvvm.binding.Binding}.
  */
 public enum BindMode {
 

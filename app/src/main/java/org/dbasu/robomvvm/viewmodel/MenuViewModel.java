@@ -91,7 +91,7 @@ public class MenuViewModel extends BaseViewModel {
 
     /**
      * Inflate the menu corresponding to this view model. The View Model is stored as a tag on the root MenuItem using
-     * {@link ObjectTagger}. This makes sure that the View Model is kept alive as long as the
+     * {@link org.dbasu.robomvvm.util.ObjectTagger}. This makes sure that the View Model is kept alive as long as the
      * MenuItem is alive.
      * @param menu
      *      The menu to inflate to.

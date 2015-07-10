@@ -43,7 +43,7 @@ import org.dbasu.robomvvm.viewmodel.ViewModelCollection;
 
 
 /**
- *  A view adapter to adapt an AdapterView. Can bind {@link ViewModelCollection}s to
+ *  A view adapter to adapt an AdapterView. Can bind {@link org.dbasu.robomvvm.viewmodel.ViewModelCollection}s to
  *  AdapterViews.
  */
 public class AdapterViewAdapter extends ViewAdapter {

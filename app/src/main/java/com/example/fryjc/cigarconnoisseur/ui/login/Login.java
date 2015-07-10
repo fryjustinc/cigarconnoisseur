@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.fryjc.cigarconnoisseur.appinitialization.Initialize;
 import com.example.fryjc.cigarconnoisseur.ui.logout.LogoutFragment;
 import com.example.fryjc.cigarconnoisseur.ui.main.MainActivity;
 import com.example.fryjc.cigarconnoisseur.R;
@@ -315,6 +316,7 @@ public class Login extends ActionBarActivity implements
      */
     private void setAuthenticatedUser(AuthData authData) {
         if (authData != null) {
+
             /* Hide all the login buttons */
             mFacebookLoginButton.setVisibility(View.GONE);
             mGoogleLoginButton.setVisibility(View.GONE);
@@ -337,6 +339,7 @@ public class Login extends ActionBarActivity implements
             }
             if(!mLoggingOut)
                 startActivity(new Intent(Login.this, MainActivity.class));
+            ((Initialize) getApplication()).mUserViewModel.LoginUser(authData);
         } else {
             /* No authenticated user show all the login buttons */
             mFacebookLoginButton.setVisibility(View.VISIBLE);
