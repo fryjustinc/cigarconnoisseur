@@ -7,6 +7,7 @@ import com.example.fryjc.cigarconnoisseur.enums.Wrapper;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Cigar {
@@ -38,23 +39,23 @@ public class Cigar {
 	public void setRingGauge(String ringGauge) {
 		this.ringGauge = ringGauge;
 	}
-	public ArrayList<Country> getCountry() {
+	public List<Country> getCountry() {
 		return country;
 	}
-	public void setCountry(ArrayList<Country> country) {
+	public void setCountry(List<Country> country) {
 		this.country = country;
 	}
-	public ArrayList<Filler> getFiller() {
+	public List<Filler> getFiller() {
 		return filler;
 	}
-	public void setFiller(ArrayList<Filler> filler) {
+	public void setFiller(List<Filler> filler) {
 		this.filler = filler;
 	}
-	public ArrayList<Wrapper
+	public List<Wrapper
 			> getWrapper() {
 		return wrapper;
 	}
-	public void setWrapper(ArrayList<Wrapper> wrapper) {
+	public void setWrapper(List<Wrapper> wrapper) {
 		this.wrapper = wrapper;
 	}
 	public String getColor() {
@@ -80,19 +81,19 @@ public class Cigar {
 	@SerializedName("ringGauge")
 	private String ringGauge;
 	@SerializedName("country")
-	private ArrayList<Country> country;
+	private List<Country> country;
 	@SerializedName("filler")
-	private ArrayList<Filler> filler;
+	private List<Filler> filler;
 	@SerializedName("wrapper")
-	private ArrayList<Wrapper> wrapper;
+	private List<Wrapper> wrapper;
 	@SerializedName("color")
 	private String color;
 	@SerializedName("strength")
 	private Strength strength;
 	@SerializedName("rating")
 	private String rating;
-	public Cigar(String pbrand, String pname, String plength, String pringGauge, ArrayList<Country> pcountry,
-			ArrayList<Filler> pfiller, ArrayList<Wrapper> pwrapper, String pcolor, Strength pstrength, String prating){
+	public Cigar(String pbrand, String pname, String plength, String pringGauge, List<Country> pcountry,
+			List<Filler> pfiller, List<Wrapper> pwrapper, String pcolor, Strength pstrength, String prating){
 		brand = pbrand;
 		name = pname;
 		length = plength;

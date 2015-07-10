@@ -3,6 +3,9 @@ package com.example.fryjc.cigarconnoisseur.models;
 import com.firebase.client.AuthData;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by fryjc on 6/7/2015.
@@ -10,13 +13,14 @@ import java.util.ArrayList;
 public class User {
     private AuthData authData;
     private Humidor mHumidor;
-    private ArrayList<PMessage> mMessages;
-    private ArrayList<RatingComment> mComments;
-    private ArrayList<CigarRating> mRatings;
-
+    private List<PMessage> mMessages;
+    private List<RatingComment> mComments;
+    private List<CigarRating> mRatings;
     public User() {
-
+        mHumidor = new Humidor();
+        mHumidor.makeHolder();
     }
+
 
     public AuthData getAuthData() {
         return authData;
@@ -36,27 +40,27 @@ public class User {
         this.mHumidor = mHumidor;
     }
 
-    public ArrayList<PMessage> getmMessages() {
+    public List<PMessage> getmMessages() {
         return mMessages;
     }
 
-    public void setmMessages(ArrayList<PMessage> mMessages) {
+    public void setmMessages(List<PMessage> mMessages) {
         this.mMessages = mMessages;
     }
 
-    public ArrayList<RatingComment> getmComments() {
+    public List<RatingComment> getmComments() {
         return mComments;
     }
 
-    public void setmComments(ArrayList<RatingComment> mComments) {
+    public void setmComments(List<RatingComment> mComments) {
         this.mComments = mComments;
     }
 
-    public ArrayList<CigarRating> getmRatings() {
+    public List<CigarRating> getmRatings() {
         return mRatings;
     }
 
-    public void setmRatings(ArrayList<CigarRating> mRatings) {
+    public void setmRatings(List<CigarRating> mRatings) {
         this.mRatings = mRatings;
     }
 

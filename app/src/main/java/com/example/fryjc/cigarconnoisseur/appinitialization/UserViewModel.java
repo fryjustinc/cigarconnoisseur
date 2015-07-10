@@ -10,17 +10,19 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import org.dbasu.robomvvm.viewmodel.ViewModel;
 
 
 /**
  * Created by fryjc on 7/9/2015.
  */
-public class UserViewModel{
+public class UserViewModel extends ViewModel{
     private User mUser;
     private Firebase res;
     private boolean mLoggedIn = false;
     private DataSnapshot test;
-    public UserViewModel(){
+    public UserViewModel(Context context){
+        super(context);
         res = new Firebase("https://glaring-heat-6164.firebaseio.com/");
     }
     public void LoginUser(AuthData authData){

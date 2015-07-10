@@ -18,21 +18,13 @@ public class CigarHolder {
     public void setAge(String age) {
         this.age = age;
     }
-    @SerializedName("age")
     private String age;
-    @SerializedName("personalRating")
     private String personalRating;
-    @SerializedName("ratingDescription")
     private String ratingDescription;
-    @SerializedName("dealer")
     private String dealer;
-    @SerializedName("notes")
     private String notes;
-    @SerializedName("amountOwned")
     private String amountOwned;
-    @SerializedName("amountSmoked")
     private String amountSmoked;
-    @SerializedName("mSmallImageURL")
     private String mSmallImageURL;
 
     public int getmImage() {
@@ -93,7 +85,6 @@ public class CigarHolder {
         this.purchased = purchased;
     }
 
-        @SerializedName("purchased")
     private String purchased;
 
     public String getAmountOwned() {
@@ -129,6 +120,9 @@ public class CigarHolder {
     }
 
     private Cigar cigar;
+    public CigarHolder(){
+
+    }
 
 
 }
