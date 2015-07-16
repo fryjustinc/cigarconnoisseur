@@ -18,6 +18,7 @@ import com.example.fryjc.cigarconnoisseur.appinitialization.Initialize;
 import com.example.fryjc.cigarconnoisseur.ui.logout.LogoutFragment;
 import com.example.fryjc.cigarconnoisseur.ui.main.MainActivity;
 import com.example.fryjc.cigarconnoisseur.R;
+import com.example.fryjc.cigarconnoisseur.ui.main.UserViewModel;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -337,9 +338,14 @@ public class Login extends ActionBarActivity implements
             if (name != null) {
                 mLoggedInStatusTextView.setText("Logged in as " + name + " (" + authData.getProvider() + ")");
             }
-            if(!mLoggingOut)
-                startActivity(new Intent(Login.this, MainActivity.class));
-            ((Initialize) getApplication()).mUserViewModel.LoginUser(authData);
+            if(!mLoggingOut) {
+                UserViewModel userLogin = new UserViewModel(this);
+                userLogin.LoginUser(authData);
+                String authUID = authData.getUid();
+                Intent i = new Intent(Login.this, MainActivity.class);
+                i.putExtra("authUID",authUID);
+                startActivity(i);
+            }
         } else {
             /* No authenticated user show all the login buttons */
             mFacebookLoginButton.setVisibility(View.VISIBLE);

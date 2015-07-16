@@ -21,7 +21,7 @@ import android.widget.RelativeLayout;
 
 import com.example.fryjc.cigarconnoisseur.R;
 import com.example.fryjc.cigarconnoisseur.models.NavDrawerItem;
-import com.example.fryjc.cigarconnoisseur.ui.CigarDBViewModel;
+import com.example.fryjc.cigarconnoisseur.ui.brand.CigarDBViewModel;
 import com.example.fryjc.cigarconnoisseur.ui.main.adapters.NavDrawerListAdapter;
 import com.google.gson.Gson;
 

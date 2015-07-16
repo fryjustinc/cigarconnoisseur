@@ -1,5 +1,6 @@
 package com.example.fryjc.cigarconnoisseur.ui.main;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -11,6 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.example.fryjc.cigarconnoisseur.models.User;
 import com.example.fryjc.cigarconnoisseur.ui.brand.CigarDatabaseFragment;
 import com.example.fryjc.cigarconnoisseur.ui.humidor.HumidorFragment;
 import com.example.fryjc.cigarconnoisseur.ui.logout.LogoutFragment;
@@ -28,11 +30,16 @@ public class MainActivity extends ActionBarActivity implements FloatingActionBut
     private FragmentNavigationDrawer dlDrawer;
     private FrameLayout mFrame;
     private RelativeLayout logoutLayout;
+    private UserViewModel mUserVM;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.drawer_main);
-
+        Intent intent = getIntent();
+        String authUID = intent.getStringExtra("authUID");
+        this.mUserVM = new UserViewModel(this);
+        mUserVM.LoadUserData(authUID);
         Firebase.setAndroidContext(this);
         Firebase firebase = new Firebase("https://glaring-heat-6164.firebaseio.com/");
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
@@ -79,6 +86,14 @@ public class MainActivity extends ActionBarActivity implements FloatingActionBut
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         dlDrawer.getDrawerToggle().syncState();
+    }
+
+    public UserViewModel getmUserVM() {
+        return mUserVM;
+    }
+
+    public void setmUserVM(UserViewModel mUserVM) {
+        this.mUserVM = mUserVM;
     }
 
     @Override

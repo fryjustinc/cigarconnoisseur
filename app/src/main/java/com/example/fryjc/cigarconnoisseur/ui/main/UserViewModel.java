@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.appinitialization;
+package com.example.fryjc.cigarconnoisseur.ui.main;
 
 import android.content.Context;
 import android.provider.ContactsContract;
@@ -49,13 +49,7 @@ public class UserViewModel extends ViewModel{
                     res.child("Users").setValue(mUser.getAuthData().getUid());
                     res.child("Users").child(mUser.getAuthData().getUid()).setValue(mUser);
                 } else{
-                    Humidor userHumidor = new Humidor();
-                    ArrayList<Object> ownedCigars = new ArrayList<Object>();
-                    ArrayList<Object> smokedCigars = new ArrayList<Object>();
-                    DataSnapshot owned = dataSnapshot.child("mHumidor").child("mCigarsOwned");
-                    ownedCigars = (ArrayList<Object>) owned.getValue();
-                    DataSnapshot smoked = dataSnapshot.child("mHumidor").child("mCigarsSmoked");
-                    smokedCigars = (ArrayList<Object>) smoked.getValue();
+                    res.child("Users").child(mUser.getAuthData().getUid()).child("authData").setValue(mUser.getAuthData());
                 }
             }
 
@@ -65,6 +59,28 @@ public class UserViewModel extends ViewModel{
             }
         });
 
+
+    }
+
+    public void LoadUserData(String Uid){
+        Firebase usersRef = new Firebase("https://glaring-heat-6164.firebaseio.com/Users");
+        usersRef.child(Uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Humidor userHumidor = new Humidor();
+                ArrayList<Object> ownedCigars = new ArrayList<Object>();
+                ArrayList<Object> smokedCigars = new ArrayList<Object>();
+                DataSnapshot owned = dataSnapshot.child("mHumidor").child("mCigarsOwned");
+                ownedCigars = (ArrayList<Object>) owned.getValue();
+                DataSnapshot smoked = dataSnapshot.child("mHumidor").child("mCigarsSmoked");
+                smokedCigars = (ArrayList<Object>) smoked.getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
     }
 

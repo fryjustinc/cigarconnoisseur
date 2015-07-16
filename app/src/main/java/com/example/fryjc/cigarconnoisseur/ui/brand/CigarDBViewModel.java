@@ -1,4 +1,4 @@
-package com.example.fryjc.cigarconnoisseur.ui;
+package com.example.fryjc.cigarconnoisseur.ui.brand;
 
 import android.content.Context;
 
